@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Clinico</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+<!--Font awesome-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row row-cols-3">
+        <div class="col">
+            <h3>Paciente: Juan Perez</h3>
+            <h4>Expediente: MM1805</h4>               
+        </div>
+        <div class="col">
+            <h4>Cita: 2</h4>
+        </div>
+        <div class="col">
+            <h4>Fecha cita: Lunes 29 Enero 2020</h4>
+        </div>
+        </div>
+    </div>   
+    <!-- label para insertar-->
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <h4>INGRESE UNA DESCRIPCIÓN DEL DIAGNOSTICO</h4>
+        <form id="addUser" action="">
+            <div class="form-group">
+            <input class="form-control" type="text" name="name" placeholder="Numero descripción" required>
+            </div>
+            <div class="form-group">
+            <input class="form-control" type="text" name="address" placeholder="Descripcion diagnostico" required>
+            </div>            
+            <button class="btn btn-success form-control" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </form>
+    </div> 
+
+    <br><br><br><br><br><br><br><br><br>
+    
+    <h3>DESCRIPCIONES DE DIAGNOSTICO</h3>
+    <table id="userTable" class="table table-striped">
+        <tr>
+        <th>#</th>
+        <th>Descripcion Diagnostico</th>
+                </tr>
+    </table>
+<!-- Botón en HTML (lanza el modal en Bootstrap) -->
+<a href="#victorModal" role="button" class="btn btn-large btn-success" data-toggle="modal">Guardar todo</a>
+
+<!-- Modal / Ventana / Overlay en HTML -->
+<div id="victorModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">¿Desea guardar el diagnostico?</h4>
+            </div>
+            <div class="modal-body">
+                <p>La cita se guardará como "Atendido"</p>
+                    </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <button type="button" class="btn btn-success" onClick=location.href="index.html"><i class="fa fa-home"></i></button>
+    <!-- partial -->
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./clinico.js"></script>
+
+</body>
+</html>
